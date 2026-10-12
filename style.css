@@ -1,0 +1,157 @@
+/* Lingavo website. Colours from theme/palette.ts; the font is the app's, served from here rather than a font service. */
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('fonts/AtkinsonHyperlegibleNext-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('fonts/AtkinsonHyperlegibleNext-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --ground: #f6f2ea;
+  --surface: #fffdf9;
+  --line: #e4dccf;
+  --ink: #26221f;
+  --muted: #615a52;
+  --accent-text: #b42318;
+  --focus: #1b5e7a;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #171412;
+    --surface: #221e1b;
+    --line: #3a332e;
+    --ink: #f3eee6;
+    --muted: #b5aba0;
+    --accent-text: #f2877b;
+    --focus: #8ccbe3;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+header {
+  padding: 0.5rem 0 1.5rem;
+}
+header a {
+  display: inline-block;
+}
+header img {
+  display: block;
+  width: 9rem;
+  height: auto;
+}
+.home header {
+  text-align: center;
+  padding-top: 2rem;
+}
+.home header img {
+  width: 14rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+.home h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 2rem 0 0.4rem;
+}
+p,
+ul {
+  margin: 0 0 1rem;
+}
+ul {
+  padding-left: 1.25rem;
+}
+li + li {
+  margin-top: 0.35rem;
+}
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent-text);
+  text-underline-offset: 0.15em;
+}
+a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.updated {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem 1.25rem 0.25rem;
+  margin: 0 0 1.5rem;
+}
+.card h2:first-child {
+  margin-top: 0;
+}
+
+.contact {
+  font-size: 1.25rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 1rem;
+}
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+footer nav a {
+  display: inline-block;
+  padding: 0.6rem 0;
+}
